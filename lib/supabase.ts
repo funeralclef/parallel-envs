@@ -6,7 +6,7 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 export async function getSongs() {
-  const { data, error } = await supabase.from("songs").select("*").order("title")
+  const { data, error } = await supabase.from("art").select("*").order("title")
 
   if (error) {
     console.error("Error fetching songs:", error)
