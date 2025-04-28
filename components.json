@@ -17,5 +17,16 @@
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
-  "iconLibrary": "lucide"
+  "iconLibrary": "lucide",
+  "colors": {
+    "dark": "#18181b",
+    "dark-foreground": "#e4e4e7",
+    "dark-muted": "#27272a",
+    "dark-muted-foreground": "#a1a1aa",
+    "dark-popover": "#27272a",
+    "dark-popover-foreground": "#e4e4e7",
+    "dark-border": "#3f3f46",
+    "dark-card": "#18181b",
+    "dark-card-foreground": "#e4e4e7"
+  }
 }

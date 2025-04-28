@@ -15,12 +15,12 @@ export default function VotingResults({ results }: VotingResultsProps) {
       {sortedResults.length === 0 ? (
         <p className="text-muted-foreground">No votes have been submitted yet.</p>
       ) : (
-        <div className="space-y-3">
+        <div className="space-y-3 ">
           {sortedResults.map((result, index) => (
-            <Card key={result.songId} className="p-4">
+            <Card key={result.songId} className="p-4 dark:bg-dark dark:border-dark-border">
               <div className="flex items-center">
                 <div className="text-2xl font-bold mr-4 w-8">#{index + 1}</div>
-                <div className="flex-1">
+                <div className="flex-1 dark:text-dark-foreground">
                   <h3 className="font-medium text-lg">{result.title}</h3>
                   <p className="text-muted-foreground">{result.artist}</p>
                 </div>

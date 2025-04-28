@@ -8,14 +8,14 @@ interface MainNavigationProps {
 
 export default function MainNavigation({ view, onViewChange }: MainNavigationProps) {
   return (
-    <div className="border-b">
+    <div className="border-b dark:border-dark-border">
       <div className="flex h-16 items-center px-4">
         <div className="flex items-center space-x-4">
-          <Button variant={view === "experts" ? "default" : "outline"} onClick={() => onViewChange("experts")}>
+          <Button variant={view === "experts" ? "default" : "outline"} className="dark:bg-dark dark:text-dark-foreground" onClick={() => onViewChange("experts")}>
             <Users className="mr-2 h-4 w-4" />
             Expert Panel
           </Button>
-          <Button variant={view === "teacher" ? "default" : "outline"} onClick={() => onViewChange("teacher")}>
+          <Button variant={view === "teacher" ? "default" : "outline"} className="dark:bg-dark dark:text-dark-foreground" onClick={() => onViewChange("teacher")}>
             <UserCog className="mr-2 h-4 w-4" />
             Teacher Panel
           </Button>
