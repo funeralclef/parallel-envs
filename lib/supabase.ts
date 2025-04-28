@@ -5,6 +5,7 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
+//3333
 export async function getSongs() {
   const { data, error } = await supabase.from("songs").select("*").order("title")
 
