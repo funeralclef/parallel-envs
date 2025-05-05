@@ -11,7 +11,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Song Voting System",
+  title: "Art Voting Platform",
   description: "A platform for experts to vote on their favorite songs",
   generator: 'v0.dev'
 }
