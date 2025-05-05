@@ -56,11 +56,8 @@ export default function LoginPage() {
       <Card className="w-full max-w-md bg-card">
         <CardHeader className="space-y-1">
           <div className="flex justify-center mb-4">
-            <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center">
-              <Music className="h-6 w-6 text-primary-foreground" />
-            </div>
           </div>
-          <CardTitle className="text-2xl text-center">Song Voting System</CardTitle>
+          <CardTitle className="text-2xl text-center">Art Voting System</CardTitle>
           <CardDescription className="text-center">Enter your name to continue</CardDescription>
         </CardHeader>
         <CardContent>
