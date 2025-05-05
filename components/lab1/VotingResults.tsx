@@ -25,7 +25,6 @@ export default function VotingResults({ results }: VotingResultsProps) {
                   <p className="text-muted-foreground">{result.artist}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-lg font-bold">{result.totalPoints} pts</p>
                   <p className="text-sm text-muted-foreground">{result.voteCount} votes</p>
                 </div>
               </div>

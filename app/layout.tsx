@@ -5,7 +5,10 @@ import "./globals.css"
 import { AuthProvider } from "@/contexts/AuthContext"
 import { ToasterProvider } from "@/components/providers/ToasterProvider"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: "Song Voting System",
@@ -19,12 +22,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <AuthProvider>
-          {children}
-          <ToasterProvider />
-        </AuthProvider>
+    <html lang="en" className="dark">
+      <head>
+        <meta name="theme-color" content="#0a0a0a" />
+      </head>
+      <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
+        <div className="min-h-screen">
+          <AuthProvider>
+            {children}
+            <ToasterProvider />
+          </AuthProvider>
+        </div>
       </body>
     </html>
   )

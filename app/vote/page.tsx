@@ -110,8 +110,8 @@ export default function VotePage() {
   }
 
   return (
-      <div className="min-h-screen bg-gray-50">
-        <header className="bg-white shadow">
+      <div className="min-h-screen bg-background">
+        <header className="bg-card shadow">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <h1 className="text-xl font-semibold">Welcome, {session?.user?.name}</h1>
             <Button variant="ghost" size="sm" onClick={logout}>
@@ -123,15 +123,15 @@ export default function VotePage() {
 
         <main className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-sm mb-8">
+            <div className="bg-card p-6 rounded-lg shadow-sm mb-8">
               <h2 className="text-2xl font-bold mb-4">
-                {hasVoted ? "Thank you for voting!" : "Select your top 3 songs"}
+                {hasVoted ? "Thank you for voting!" : "Select your top 3 Arts"}
               </h2>
 
-              <div className="bg-gray-50 p-4 rounded-lg mb-6">
-                <h3 className="text-lg font-medium mb-3">Your Selected Songs ({selectedSongs.length}/3)</h3>
+              <div className="bg-muted p-4 rounded-lg mb-6">
+                <h3 className="text-lg font-medium mb-3">Your Selected Arts ({selectedSongs.length}/3)</h3>
                 {selectedSongs.length === 0 ? (
-                    <p className="text-gray-500">Select up to 3 songs from the list below</p>
+                    <p className="text-muted-foreground">Select up to 3 Arts from the list below</p>
                 ) : (
                     <div className="space-y-2">
                       <DragDropContext onDragEnd={handleDragEnd}>
@@ -140,7 +140,7 @@ export default function VotePage() {
                               <div
                                   {...provided.droppableProps}
                                   ref={provided.innerRef}
-                                  className={`space-y-2 rounded-lg ${snapshot.isDraggingOver ? "bg-gray-100" : ""}`}
+                                  className={`space-y-2 rounded-lg ${snapshot.isDraggingOver ? "bg-muted" : ""}`}
                               >
                                 {selectedSongs.map((song, index) => (
                                     <Draggable key={song.id} draggableId={song.id} index={index}>
@@ -149,19 +149,19 @@ export default function VotePage() {
                                               ref={provided.innerRef}
                                               {...provided.draggableProps}
                                               className={`p-3 transition-colors ${
-                                                  snapshot.isDragging ? "bg-gray-100 shadow-lg" : ""
+                                                  snapshot.isDragging ? "bg-muted shadow-lg" : ""
                                               }`}
                                           >
                                             <div className="flex items-center gap-3">
                                               <div {...provided.dragHandleProps} className="cursor-grab active:cursor-grabbing">
-                                                <GripVertical className="h-5 w-5 text-gray-400" />
+                                                <GripVertical className="h-5 w-5 text-muted-foreground" />
                                               </div>
                                               <div className="flex-1">
                                                 <div className="font-medium flex items-center gap-2">
-                                                  <span className="text-sm font-bold text-gray-500">#{index + 1}</span>
+                                                  <span className="text-sm font-bold text-muted-foreground">#{index + 1}</span>
                                                   {song.title}
                                                 </div>
-                                                <div className="text-sm text-gray-500">{song.artist}</div>
+                                                <div className="text-sm text-muted-foreground">{song.artist}</div>
                                               </div>
                                             </div>
                                           </Card>
@@ -185,9 +185,9 @@ export default function VotePage() {
               </div>
 
               {hasVoted ? (
-                  <div className="bg-green-50 border border-green-200 p-4 rounded-lg">
-                    <h3 className="text-lg font-medium text-green-800 mb-2">Thank you for your votes!</h3>
-                    <p className="text-green-700">Your votes have been recorded successfully.</p>
+                  <div className="bg-green-900 border border-green-700 p-4 rounded-lg">
+                    <h3 className="text-lg font-medium text-green-200 mb-2">Thank you for your votes!</h3>
+                    <p className="text-green-300">Your votes have been recorded successfully.</p>
                   </div>
               ) : (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -197,15 +197,15 @@ export default function VotePage() {
                           <Card
                               key={song.id}
                               className={`p-4 cursor-pointer transition-colors ${
-                                  isSelected ? "bg-primary/10 border-primary" : "hover:bg-gray-50"
+                                  isSelected ? "bg-primary/10 border-primary" : "hover:bg-muted"
                               }`}
                               onClick={() => handleSongSelect(song)}
                           >
                             <div className="flex justify-between items-center">
                               <div>
                                 <h3 className="font-medium">{song.title}</h3>
-                                <p className="text-sm text-gray-500">{song.artist}</p>
-                                <p className="text-xs text-gray-400 mt-1">{song.genre}</p>
+                                <p className="text-sm text-muted-foreground">{song.artist}</p>
+                                <p className="text-xs text-muted-foreground mt-1">{song.genre}</p>
                               </div>
                               {isSelected && (
                                   <div className="h-6 w-6 rounded-full bg-primary flex items-center justify-center">

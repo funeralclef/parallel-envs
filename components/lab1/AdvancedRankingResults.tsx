@@ -159,12 +159,12 @@ export default function AdvancedRankingResults({ result }: AdvancedRankingResult
                 </div>
             )}
 
-            <div className="p-4 bg-gray-50 border rounded-lg">
+            <div className="p-4 bg-card border border-border rounded-lg">
                 <h4 className="font-medium mb-2">About These Rankings</h4>
                 <p className="text-sm text-muted-foreground">
                     These rankings represent consensus orderings calculated from all expert votes after applying the selected
                     heuristic. Each method uses a different approach to find the optimal ranking that best represents all expert
-                    opinions.
+                    opinions for the Arts.
                 </p>
             </div>
         </div>

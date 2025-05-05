@@ -22,7 +22,7 @@ export default function HeuristicSelector({ selectedHeuristic, onChange }: Heuri
                                 Standard Ranking
                             </Label>
                             <p className="text-sm text-muted-foreground">
-                                Ranks songs by total points (3 points for 1st place, 2 for 2nd, 1 for 3rd)
+                                Ranks Arts by total points (3 points for 1st place, 2 for 2nd, 1 for 3rd)
                             </p>
                         </div>
                     </div>
@@ -33,7 +33,7 @@ export default function HeuristicSelector({ selectedHeuristic, onChange }: Heuri
                             <Label htmlFor="h1" className="font-medium">
                                 H1 - Third Place Mentions
                             </Label>
-                            <p className="text-sm text-muted-foreground">Songs that were ranked in 3rd place in at least one vote</p>
+                            <p className="text-sm text-muted-foreground">Arts that were ranked in 3rd place in at least one vote</p>
                         </div>
                     </div>
 
@@ -43,7 +43,7 @@ export default function HeuristicSelector({ selectedHeuristic, onChange }: Heuri
                             <Label htmlFor="h2" className="font-medium">
                                 H2 - Second Place Mentions
                             </Label>
-                            <p className="text-sm text-muted-foreground">Songs that were ranked in 2nd place in at least one vote</p>
+                            <p className="text-sm text-muted-foreground">Arts that were ranked in 2nd place in at least one vote</p>
                         </div>
                     </div>
 
@@ -53,7 +53,7 @@ export default function HeuristicSelector({ selectedHeuristic, onChange }: Heuri
                             <Label htmlFor="h3" className="font-medium">
                                 H3 - First Place Mentions
                             </Label>
-                            <p className="text-sm text-muted-foreground">Songs that were ranked in 1st place in at least one vote</p>
+                            <p className="text-sm text-muted-foreground">Arts that were ranked in 1st place in at least one vote</p>
                         </div>
                     </div>
 
@@ -63,7 +63,7 @@ export default function HeuristicSelector({ selectedHeuristic, onChange }: Heuri
                             <Label htmlFor="h4" className="font-medium">
                                 H4 - Multiple Third Place Mentions
                             </Label>
-                            <p className="text-sm text-muted-foreground">Songs that were ranked in 3rd place in at least two votes</p>
+                            <p className="text-sm text-muted-foreground">Arts that were ranked in 3rd place in at least two votes</p>
                         </div>
                     </div>
 
@@ -74,7 +74,7 @@ export default function HeuristicSelector({ selectedHeuristic, onChange }: Heuri
                                 H5 - Third and Second Place Mentions
                             </Label>
                             <p className="text-sm text-muted-foreground">
-                                Songs ranked in 3rd place in one vote and 2nd place in another
+                                Arts ranked in 3rd place in one vote and 2nd place in another
                             </p>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ export default function HeuristicSelector({ selectedHeuristic, onChange }: Heuri
                                 H6 - Lowest Mention Count
                             </Label>
                             <p className="text-sm text-muted-foreground">
-                                Songs with the lowest total number of mentions across all votes
+                                Arts with the lowest total number of mentions across all votes
                             </p>
                         </div>
                     </div>
@@ -97,7 +97,7 @@ export default function HeuristicSelector({ selectedHeuristic, onChange }: Heuri
                             <Label htmlFor="h7" className="font-medium">
                                 H7 - Never in Top 3
                             </Label>
-                            <p className="text-sm text-muted-foreground">Songs that never appeared in the top 3 in any vote</p>
+                            <p className="text-sm text-muted-foreground">Arts that never appeared in the top 3 in any vote</p>
                         </div>
                     </div>
                 </div>

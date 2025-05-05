@@ -195,8 +195,8 @@ export default function AdminPage() {
   }
 
   return (
-      <div className="min-h-screen bg-gray-50">
-        <header className="bg-white shadow">
+      <div className="min-h-screen bg-background">
+        <header className="bg-card shadow">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <h1 className="text-xl font-semibold">Teacher Dashboard - {session?.user?.name}</h1>
             <Button variant="ghost" size="sm" onClick={logout}>
@@ -250,8 +250,7 @@ export default function AdminPage() {
                                 <RankDistribution result={result} />
                               </div>
                               <div className="text-right">
-                                <p className="text-lg font-bold">{result.totalPoints} pts</p>
-                                <p className="text-sm text-gray-500">{result.voteCount} votes</p>
+                                <p className="text-lg font-bold">{result.voteCount} votes</p>
                               </div>
                             </div>
                         ))}
@@ -299,7 +298,7 @@ export default function AdminPage() {
                   </div>
 
                   <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <Card className="bg-gray-50">
+                    <Card className="bg-card text-card-foreground p-4 rounded-lg border border-border shadow">
                       <CardContent className="pt-6">
                         <div className="text-center">
                           <p className="text-sm text-gray-500">Total Experts</p>
@@ -308,7 +307,7 @@ export default function AdminPage() {
                       </CardContent>
                     </Card>
 
-                    <Card className="bg-gray-50">
+                    <Card className="bg-card text-card-foreground p-4 rounded-lg border border-border shadow">
                       <CardContent className="pt-6">
                         <div className="text-center">
                           <p className="text-sm text-gray-500">Votes Cast</p>
@@ -317,7 +316,7 @@ export default function AdminPage() {
                       </CardContent>
                     </Card>
 
-                    <Card className="bg-gray-50">
+                    <Card className="bg-card text-card-foreground p-4 rounded-lg border border-border shadow">
                       <CardContent className="pt-6">
                         <div className="text-center">
                           <p className="text-sm text-gray-500">Total Songs</p>
